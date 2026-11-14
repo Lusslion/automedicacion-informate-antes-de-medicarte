@@ -1,0 +1,17 @@
+# Material de referencia de terceros (no se publica)
+www.mayoclinic.org-DESIGN.md
+
+# Backups locales
+*.backup.html
+
+# Documentos internos de trabajo (decisión del usuario: no se publican)
+CLAUDE.md
+AGENTS.md
+
+# Dependencias de desarrollo
+node_modules/
+
+# Archivos del sistema
+Thumbs.db
+desktop.ini
+.DS_Store
