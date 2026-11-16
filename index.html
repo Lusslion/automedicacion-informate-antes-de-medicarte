@@ -15,7 +15,7 @@
     <span class="brand"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m9 15 6-6M5 19a5.66 5.66 0 0 1 0-8l6-6a5.66 5.66 0 0 1 8 8l-6 6a5.66 5.66 0 0 1-8 0Z"/></svg> Uso responsable</span>
     <button class="theme-btn" type="button" aria-label="Cambiar a modo oscuro"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M20.9 13A9 9 0 0 1 11 3.1 9 9 0 1 0 20.9 13Z"/></svg></button>
     <button class="menu-btn" type="button" aria-expanded="false" aria-controls="menu"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 6h16M4 12h16M4 18h16"/></svg> <span>Menú</span></button>
-    <ul class="menu" id="menu">
+    <ul class="menu" id="menu" role="list">
       <li><a href="#inicio">Inicio</a></li>
       <li><a href="#que-es">¿Qué es?</a></li>
       <li><a href="#riesgos">Riesgos</a></li>
@@ -23,8 +23,10 @@
       <li><a href="#gripe">Gripe y resfrío</a></li>
       <li><a href="#mitos">Mitos y verdades</a></li>
       <li><a href="#fuentes">Fuentes</a></li>
+      <li><a href="#autoevaluacion">Autoevaluación</a></li>
     </ul>
   </div>
+  <div class="read-progress" aria-hidden="true"><span></span></div>
 </nav>
 
 <header class="hero" id="inicio">
@@ -34,16 +36,10 @@
       <p>Este sitio explica, con palabras simples, qué es automedicarse, qué riesgos tiene y cómo cuidar tu salud y la de tu familia usando bien los medicamentos.</p>
       <a class="btn" href="#que-es">Empezar <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 5v14M5 12l7 7 7-7"/></svg></a>
     </div>
-    <svg class="hero-art" viewBox="0 0 300 260" role="img" aria-label="Frasco de medicamento con pastillas y una cruz de salud">
-      <circle cx="150" cy="130" r="118" class="hero-halo"/>
-      <rect x="95" y="70" width="110" height="150" rx="18" class="hero-body"/>
-      <rect x="88" y="48" width="124" height="34" rx="10" class="hero-detail"/>
-      <rect x="110" y="110" width="80" height="60" rx="10" class="hero-label"/>
-      <path d="M150 120v40M130 140h40" class="hero-cross" stroke-width="10" stroke-linecap="round"/>
-      <g transform="rotate(-25 245 205)"><rect x="215" y="192" width="64" height="26" rx="13" class="hero-detail"/><rect x="247" y="192" width="32" height="26" rx="13" class="hero-body"/></g>
-      <circle cx="48" cy="205" r="20" class="hero-detail"/><circle cx="48" cy="205" r="20" class="hero-outline" stroke-width="3"/>
-      <g transform="rotate(30 50 80)"><rect x="22" y="67" width="56" height="24" rx="12" class="hero-body"/><rect x="22" y="67" width="28" height="24" rx="12" class="hero-detail"/></g>
-    </svg>
+    <figure class="hero-media">
+      <img src="assets/images/cartel-no-te-automediques.jpg" width="1402" height="1122" alt="Cartel “¡No te automediques!”: un estudiante toma una pastilla con un vaso de agua. Mensajes: Cuida tu salud. Evita riesgos. No tomes medicamentos sin receta. Consulta siempre a un profesional de la salud. Tu salud es lo primero." fetchpriority="high" decoding="async">
+      <figcaption>Ojo: los medicamentos de venta libre no requieren receta, pero también tienen riesgos. Pide orientación a un profesional de salud, como el químico farmacéutico.</figcaption>
+    </figure>
   </div>
 </header>
 
@@ -62,6 +58,7 @@
 
 <section id="que-es" class="alt">
   <div class="wrap">
+    <span class="sec-num" aria-hidden="true">01</span>
     <h2>¿Qué es la <em>automedicación</em>?</h2>
     <div class="def">Es tomar un medicamento <strong>por decisión propia</strong>, sin que un profesional de la salud lo haya indicado, para aliviar un síntoma o tratar una enfermedad.</div>
     <h3 class="subhead">Situaciones de todos los días</h3>
@@ -76,6 +73,7 @@
 
 <section id="riesgos">
   <div class="wrap">
+    <span class="sec-num" aria-hidden="true">02</span>
     <h2>Riesgos de <em>automedicarse</em></h2>
     <p class="sub">Un medicamento puede ayudar, pero mal usado también puede hacer daño.</p>
     <div class="grid">
@@ -91,6 +89,7 @@
 
 <section id="uso" class="alt">
   <div class="wrap">
+    <span class="sec-num" aria-hidden="true">03</span>
     <h2>Uso <em>responsable</em></h2>
     <div class="box">
       <svg viewBox="0 0 100 100" aria-hidden="true"><circle cx="50" cy="50" r="46" class="box-halo"/><circle cx="50" cy="36" r="13" class="box-person"/><path d="M24 78c0-16 12-26 26-26s26 10 26 26" class="box-person"/><path d="M50 56v18M41 65h18" class="box-cross" stroke-width="5" stroke-linecap="round"/></svg>
@@ -110,6 +109,7 @@
 
 <section id="gripe">
   <div class="wrap">
+    <span class="sec-num" aria-hidden="true">04</span>
     <h2>Gripe y <em>resfrío</em></h2>
     <p class="sub">Se parecen, pero no son iguales. Ambos los causan virus.</p>
     <div class="vs">
@@ -132,6 +132,7 @@
 
 <section id="mitos" class="alt">
   <div class="wrap">
+    <span class="sec-num" aria-hidden="true">05</span>
     <h2>Mitos y <em>verdades</em></h2>
     <p class="sub">Toca cada afirmación para ver la explicación.</p>
     <div class="myth"><h3 class="myth-q"><button type="button" aria-expanded="false" aria-controls="mito-1" id="mito-1-btn"><span class="myth-text">“Si es de venta libre, no tiene riesgos.”</span><span class="myth-ind" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" focusable="false"><path d="M12 5v14M5 12h14"/></svg></span></button></h3><div class="a" id="mito-1" role="region" aria-labelledby="mito-1-btn"><div class="a-in"><div class="a-content"><b class="tag is-myth">Mito.</b> Venta libre significa que no requiere receta, pero igual puede causar efectos adversos e interacciones.</div></div></div></div>
@@ -146,6 +147,7 @@
 
 <section id="fuentes">
   <div class="wrap">
+    <span class="sec-num" aria-hidden="true">06</span>
     <h2>Fuentes de <em>información</em></h2>
     <p class="sub">Consulta siempre fuentes oficiales y habla con un profesional de salud.</p>
     <div class="src">
@@ -158,7 +160,79 @@
       <ul><li>Ante dudas, acude a tu centro de salud o a una farmacia con profesional.</li><li>Lleva siempre una lista de lo que tomas.</li><li class="is-alert">En caso de intoxicación o reacción grave, ve de inmediato a emergencias.</li></ul></div>
   </div>
 </section>
+<section id="autoevaluacion" class="alt">
+  <div class="wrap">
+    <span class="sec-num" aria-hidden="true">07</span>
+    <h2>Pon a prueba lo que <em>aprendiste</em></h2>
+    <p class="sub">Responde verdadero o falso. No guardamos tus respuestas: todo queda en tu dispositivo.</p>
+    <div class="quiz-status"><p class="quiz-progress">Respondiste 0 de 7</p><div class="quiz-bar" aria-hidden="true"><span></span></div></div>
+    <ol class="quiz" role="list" data-correcto="¡Correcto!" data-incorrecto="Incorrecto." data-respuesta="La respuesta es:" data-progreso="Respondiste {n} de {total}" data-resultado="Acertaste {x} de {total}" data-alto="¡Excelente! Tienes muy claros los riesgos de automedicarte. Comparte lo aprendido con tu familia." data-medio="¡Bien! Repasa las explicaciones de las preguntas que fallaste. Ante cualquier duda, consulta a un profesional de salud." data-bajo="Te recomendamos revisar las secciones de esta página. Ante cualquier duda, consulta a un profesional de salud.">
+      <li class="quiz-item" data-correct="false">
+        <p class="quiz-q" id="quiz-q-1">Si un medicamento es de venta libre, no tiene ningún riesgo.</p>
+        <div class="quiz-opts" role="group" aria-labelledby="quiz-q-1"><button type="button" class="quiz-opt" data-answer="true" aria-pressed="false">Verdadero</button><button type="button" class="quiz-opt" data-answer="false" aria-pressed="false">Falso</button></div>
+        <div class="quiz-reveal" tabindex="-1">
+          <p class="quiz-feedback"></p>
+          <p class="quiz-answer"><b class="tag">Falso.</b> Venta libre significa que no requiere receta, pero igual puede causar efectos adversos e interacciones.</p>
+        </div>
+      </li>
+      <li class="quiz-item" data-correct="false">
+        <p class="quiz-q" id="quiz-q-2">Los antibióticos sirven para curar la gripe y el resfrío.</p>
+        <div class="quiz-opts" role="group" aria-labelledby="quiz-q-2"><button type="button" class="quiz-opt" data-answer="true" aria-pressed="false">Verdadero</button><button type="button" class="quiz-opt" data-answer="false" aria-pressed="false">Falso</button></div>
+        <div class="quiz-reveal" tabindex="-1">
+          <p class="quiz-feedback"></p>
+          <p class="quiz-answer"><b class="tag">Falso.</b> Estas enfermedades las causan virus, y los antibióticos solo actúan contra bacterias. Usarlos mal favorece la resistencia bacteriana.</p>
+        </div>
+      </li>
+      <li class="quiz-item" data-correct="false">
+        <p class="quiz-q" id="quiz-q-3">Si a mi vecino le sirvió un medicamento para lo mismo que tengo, puedo tomarlo también.</p>
+        <div class="quiz-opts" role="group" aria-labelledby="quiz-q-3"><button type="button" class="quiz-opt" data-answer="true" aria-pressed="false">Verdadero</button><button type="button" class="quiz-opt" data-answer="false" aria-pressed="false">Falso</button></div>
+        <div class="quiz-reveal" tabindex="-1">
+          <p class="quiz-feedback"></p>
+          <p class="quiz-answer"><b class="tag">Falso.</b> Síntomas parecidos pueden tener causas distintas. Cada tratamiento depende de la persona, su edad, su peso y su historia médica.</p>
+        </div>
+      </li>
+      <li class="quiz-item" data-correct="true">
+        <p class="quiz-q" id="quiz-q-4">Tomar dos productos que tienen el mismo ingrediente puede causar una intoxicación.</p>
+        <div class="quiz-opts" role="group" aria-labelledby="quiz-q-4"><button type="button" class="quiz-opt" data-answer="true" aria-pressed="false">Verdadero</button><button type="button" class="quiz-opt" data-answer="false" aria-pressed="false">Falso</button></div>
+        <div class="quiz-reveal" tabindex="-1">
+          <p class="quiz-feedback"></p>
+          <p class="quiz-answer"><b class="tag">Verdadero.</b> Tomar de más o repetir productos con el mismo ingrediente puede intoxicar. Los niños son más vulnerables. Ante una intoxicación, ve de inmediato a emergencias.</p>
+        </div>
+      </li>
+      <li class="quiz-item" data-correct="true">
+        <p class="quiz-q" id="quiz-q-5">Calmar un síntoma por tu cuenta puede ocultar una enfermedad que necesita atención.</p>
+        <div class="quiz-opts" role="group" aria-labelledby="quiz-q-5"><button type="button" class="quiz-opt" data-answer="true" aria-pressed="false">Verdadero</button><button type="button" class="quiz-opt" data-answer="false" aria-pressed="false">Falso</button></div>
+        <div class="quiz-reveal" tabindex="-1">
+          <p class="quiz-feedback"></p>
+          <p class="quiz-answer"><b class="tag">Verdadero.</b> Aliviar el malestar no siempre resuelve la causa. Si los síntomas duran varios días o empeoran, consulta a un profesional de salud.</p>
+        </div>
+      </li>
+      <li class="quiz-item" data-correct="true">
+        <p class="quiz-q" id="quiz-q-6">Si hay dificultad para respirar, debo buscar atención urgente.</p>
+        <div class="quiz-opts" role="group" aria-labelledby="quiz-q-6"><button type="button" class="quiz-opt" data-answer="true" aria-pressed="false">Verdadero</button><button type="button" class="quiz-opt" data-answer="false" aria-pressed="false">Falso</button></div>
+        <div class="quiz-reveal" tabindex="-1">
+          <p class="quiz-feedback"></p>
+          <p class="quiz-answer"><b class="tag">Verdadero.</b> Es una señal de alarma. No esperes ni intentes resolverlo por tu cuenta.</p>
+        </div>
+      </li>
+      <li class="quiz-item" data-correct="false">
+        <p class="quiz-q" id="quiz-q-7">Conviene guardar los medicamentos al alcance de los niños para tenerlos a mano.</p>
+        <div class="quiz-opts" role="group" aria-labelledby="quiz-q-7"><button type="button" class="quiz-opt" data-answer="true" aria-pressed="false">Verdadero</button><button type="button" class="quiz-opt" data-answer="false" aria-pressed="false">Falso</button></div>
+        <div class="quiz-reveal" tabindex="-1">
+          <p class="quiz-feedback"></p>
+          <p class="quiz-answer"><b class="tag">Falso.</b> Guárdalos en un lugar seguro, fresco y seco, fuera del alcance y de la vista de los niños, para evitar intoxicaciones.</p>
+        </div>
+      </li>
+    </ol>
+    <div class="quiz-result-live" aria-live="polite" aria-atomic="true">
+          <div class="quiz-result" hidden><h3 class="quiz-score">Acertaste X de 7</h3><p class="quiz-msg"></p><button type="button" class="btn quiz-retry">Volver a intentar</button></div>
+    </div>
+    <p class="quiz-note">Recuerda: acertar esta autoevaluación no reemplaza la orientación de un médico o químico farmacéutico.</p>
+  </div>
+</section>
 </main>
+
+<a class="to-top" href="#inicio" aria-label="Volver arriba"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 19V5m-7 7 7-7 7 7"/></svg></a>
 
 <footer><p>Este sitio es solo informativo y educativo. No indica medicamentos, dosis ni tratamientos individuales, y no reemplaza la consulta con un profesional de la salud.</p></footer>
 

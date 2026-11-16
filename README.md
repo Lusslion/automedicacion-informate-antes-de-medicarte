@@ -24,7 +24,10 @@ Sitio estático, sin librerías ni dependencias:
 - `index.html`: la página.
 - `css/estilos.css`: estilos (modo claro y oscuro).
 - `js/tema.js`: aplica el tema elegido antes de mostrar la página.
-- `js/main.js`: menú, sección activa, botón de tema y acordeón de mitos.
+- `js/main.js`: menú, sección activa, botón de tema, acordeón de mitos, autoevaluación, progreso de lectura y botón "volver arriba".
+- `assets/images/`: imágenes del sitio. El cartel de portada fue generado con inteligencia artificial.
+
+La autoevaluación no guarda ni envía ningún dato: todo ocurre en el navegador.
 
 Para verlo en local, abre `index.html` en el navegador.
 
