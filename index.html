@@ -8,6 +8,7 @@
 <script src="js/tema.js"></script>
 <link rel="stylesheet" href="css/estilos.css">
 <script src="js/main.js" defer></script>
+<script src="js/juegos.js" defer></script>
 </head>
 <body>
 <nav class="nav" aria-label="Secciones del sitio">
@@ -24,6 +25,7 @@
       <li><a href="#mitos">Mitos y verdades</a></li>
       <li><a href="#fuentes">Fuentes</a></li>
       <li><a href="#autoevaluacion">Autoevaluación</a></li>
+      <li><a href="#juegos">Juegos</a></li>
     </ul>
   </div>
   <div class="read-progress" aria-hidden="true"><span></span></div>
@@ -228,6 +230,114 @@
           <div class="quiz-result" hidden><h3 class="quiz-score">Acertaste X de 7</h3><p class="quiz-msg"></p><button type="button" class="btn quiz-retry">Volver a intentar</button></div>
     </div>
     <p class="quiz-note">Recuerda: acertar esta autoevaluación no reemplaza la orientación de un médico o químico farmacéutico.</p>
+  </div>
+</section>
+<section id="juegos">
+  <div class="wrap">
+    <span class="sec-num" aria-hidden="true">08</span>
+    <h2>Aprende <em>jugando</em></h2>
+    <p class="sub">Repasa lo que viste en esta página con cinco juegos cortos. Elige uno y empieza.</p>
+    <p class="games-nojs">Para jugar, activa JavaScript en tu navegador.</p>
+    <div class="games">
+      <div class="games-tabs" role="tablist" aria-label="Elige un juego">
+        <button type="button" role="tab" id="tab-sopa" aria-controls="panel-sopa" aria-selected="true">Sopa de letras</button>
+        <button type="button" role="tab" id="tab-memoria" aria-controls="panel-memoria" aria-selected="false" tabindex="-1">Memoria</button>
+        <button type="button" role="tab" id="tab-habitos" aria-controls="panel-habitos" aria-selected="false" tabindex="-1">¿Hábito o riesgo?</button>
+        <button type="button" role="tab" id="tab-adivina" aria-controls="panel-adivina" aria-selected="false" tabindex="-1">Adivina la palabra</button>
+        <button type="button" role="tab" id="tab-gripe" aria-controls="panel-gripe" aria-selected="false" tabindex="-1">¿Gripe o resfrío?</button>
+      </div>
+
+      <div class="game" role="tabpanel" id="panel-sopa" aria-labelledby="tab-sopa">
+        <h3 class="game-title">Sopa de letras</h3>
+        <p class="game-help">Encuentra las 10 palabras. Están en horizontal, vertical o diagonal, y se leen de izquierda a derecha o de arriba abajo. Arrastra con el ratón, o toca la primera letra y luego la última. Con el teclado, muévete con las flechas y marca el inicio y el fin con Enter o Espacio.</p>
+        <div class="game-bar">
+          <p class="game-count" id="sopa-count">Encontraste 0 de 10</p>
+          <label class="game-check"><input type="checkbox" id="sopa-timer-on"> Mostrar cronómetro</label>
+          <p class="game-timer" id="sopa-timer" hidden>Tiempo: <span>0:00</span></p>
+        </div>
+        <div class="sopa">
+          <div class="sopa-grid" id="sopa-grid" role="grid" aria-label="Sopa de letras de 12 por 12"></div>
+          <div class="sopa-side">
+            <h4 class="game-sub">Palabras</h4>
+            <ul class="sopa-words" id="sopa-words" role="list"></ul>
+            <p class="game-live" id="sopa-live" aria-live="polite" aria-atomic="true"></p>
+          </div>
+        </div>
+        <button type="button" class="btn game-btn" id="sopa-new">Nueva sopa</button>
+      </div>
+
+      <div class="game" role="tabpanel" id="panel-memoria" aria-labelledby="tab-memoria" hidden>
+        <h3 class="game-title">Memoria de parejas</h3>
+        <p class="game-help">Da vuelta dos cartas por turno. Une cada concepto con su explicación.</p>
+        <div class="game-bar"><p class="game-count" id="memo-count">Intentos: 0 · Parejas: 0 de 6</p></div>
+        <div class="memo-grid" id="memo-grid"></div>
+        <p class="game-live" id="memo-live" aria-live="polite" aria-atomic="true"></p>
+        <button type="button" class="btn game-btn" id="memo-new">Jugar otra vez</button>
+      </div>
+
+      <div class="game" role="tabpanel" id="panel-habitos" aria-labelledby="tab-habitos" hidden>
+        <h3 class="game-title">¿Buen hábito o riesgo?</h3>
+        <p class="game-help">Lee cada frase y decide si es un buen hábito o un riesgo para tu salud.</p>
+        <div class="game-bar"><p class="game-count" id="habito-count">Frase 1 de 10 · Aciertos: 0</p></div>
+        <div class="game-card" id="habito-card">
+          <p class="game-phrase" id="habito-phrase"></p>
+          <div class="game-opts" role="group" aria-labelledby="habito-phrase">
+            <button type="button" class="game-opt" data-answer="habito">Buen hábito</button>
+            <button type="button" class="game-opt" data-answer="riesgo">Riesgo</button>
+          </div>
+          <div class="game-feedback" id="habito-feedback" hidden>
+            <p class="game-verdict"></p>
+            <p class="game-why"></p>
+            <button type="button" class="btn game-btn" id="habito-next">Siguiente frase</button>
+          </div>
+        </div>
+        <div class="game-result" id="habito-result" tabindex="-1" hidden>
+          <h4 class="game-score">Resultado</h4>
+          <p class="game-msg"></p>
+          <button type="button" class="btn game-btn" id="habito-new">Volver a jugar</button>
+        </div>
+        <p class="vh" id="habito-live" aria-live="polite" aria-atomic="true"></p>
+      </div>
+
+      <div class="game" role="tabpanel" id="panel-adivina" aria-labelledby="tab-adivina" hidden>
+        <h3 class="game-title">Adivina la palabra</h3>
+        <p class="game-help">Lee la pista y elige letras. Puedes fallar 6 veces por palabra. También puedes usar el teclado de tu equipo.</p>
+        <div class="game-bar">
+          <p class="game-count" id="adivina-count">Palabra 1 de 6 · Acertadas: 0</p>
+          <div class="adivina-lives" id="adivina-lives" role="img" aria-label="Te quedan 6 de 6 fallos"></div>
+        </div>
+        <p class="adivina-clue"><b>Pista:</b> <span id="adivina-clue"></span></p>
+        <p class="adivina-word" id="adivina-word"></p>
+        <div class="adivina-keys" id="adivina-keys" role="group" aria-label="Letras"></div>
+        <p class="game-live" id="adivina-live" aria-live="polite" aria-atomic="true"></p>
+        <button type="button" class="btn game-btn" id="adivina-next" hidden>Siguiente palabra</button>
+      </div>
+
+      <div class="game" role="tabpanel" id="panel-gripe" aria-labelledby="tab-gripe" hidden>
+        <h3 class="game-title">¿Gripe o resfrío?</h3>
+        <p class="game-help">Toca “Gripe” o “Resfrío” para clasificar cada característica. Recuerda: ambos los causan virus.</p>
+        <div class="game-bar"><p class="game-count" id="gripe-count">Tarjeta 1 de 8 · Aciertos: 0</p></div>
+        <div class="game-card" id="gripe-card">
+          <p class="game-phrase" id="gripe-phrase"></p>
+          <div class="game-opts" role="group" aria-labelledby="gripe-phrase">
+            <button type="button" class="game-opt" data-answer="gripe">Gripe</button>
+            <button type="button" class="game-opt" data-answer="resfrio">Resfrío</button>
+          </div>
+        </div>
+        <div class="gripe-cols">
+          <div class="gripe-col"><h4 class="game-sub">Gripe</h4><ul class="gripe-list" id="gripe-list-gripe" role="list"></ul></div>
+          <div class="gripe-col"><h4 class="game-sub">Resfrío</h4><ul class="gripe-list" id="gripe-list-resfrio" role="list"></ul></div>
+        </div>
+        <div class="game-result" id="gripe-result" tabindex="-1" hidden>
+          <h4 class="game-score">Resultado</h4>
+          <p class="game-msg"></p>
+          <p class="game-alert">Si hay dificultad para respirar, busca atención urgente.</p>
+          <button type="button" class="btn game-btn" id="gripe-new">Volver a jugar</button>
+        </div>
+        <p class="game-live" id="gripe-live" aria-live="polite" aria-atomic="true"></p>
+      </div>
+    </div>
+    <p class="quiz-note">Estos juegos son solo educativos y no reemplazan la orientación de un médico o químico farmacéutico. No guardamos ni enviamos datos: todo queda en tu dispositivo.</p>
   </div>
 </section>
 </main>

@@ -25,9 +25,12 @@ Sitio estático, sin librerías ni dependencias:
 - `css/estilos.css`: estilos (modo claro y oscuro).
 - `js/tema.js`: aplica el tema elegido antes de mostrar la página.
 - `js/main.js`: menú, sección activa, botón de tema, acordeón de mitos, autoevaluación, progreso de lectura y botón "volver arriba".
+- `js/juegos.js`: los cinco juegos de la sección "Aprende jugando".
 - `assets/images/`: imágenes del sitio. El cartel de portada fue generado con inteligencia artificial.
 
-La autoevaluación no guarda ni envía ningún dato: todo ocurre en el navegador.
+La sección **Aprende jugando** (`#juegos`) reúne cinco juegos educativos basados en el contenido del sitio: sopa de letras, memoria de parejas, ¿buen hábito o riesgo?, adivina la palabra y ¿gripe o resfrío?
+
+La autoevaluación y los juegos no guardan ni envían ningún dato: todo ocurre en el navegador.
 
 Para verlo en local, abre `index.html` en el navegador.
 
